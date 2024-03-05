@@ -1,0 +1,25 @@
+services:
+  # arithmetic-service:
+  #   image: arithmetic-service
+  #   build: 
+  #     context: ../
+  #     dockerfile: dockerfile
+  #   container_name: arithmetic-service
+  #   ports:
+  #     - "4000:3000"
+  #   environment:
+  #     - PORT=3000
+  #   restart: "no"
+  azure-storage:
+    image: azure-storage
+    build:
+      context: ../
+      dockerfile: dockerfile
+      container_name: azure-storage
+    ports:
+      - "4001:3000"
+    environment:
+      - PORT=3000
+      - STORAGE_ACCOUNT_NAME=practicum39
+      - STORAGE_ACCESS_KEY=
+    restart: "no"
